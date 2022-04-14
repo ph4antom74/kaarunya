@@ -11,7 +11,7 @@ import { db,auth } from '../firebase/config';
 import { collection, doc ,getDocs ,query,deleteDoc} from 'firebase/firestore';
 import {useAuth} from './LoginScreenMain'
 import {signOut } from "firebase/auth";
-import Delete from '../assets/Delete.png'
+
 
 const MenuScreenDoctor=({ navigation })=> {
   const [onLoad,setLoad]=useState(true)
@@ -78,7 +78,7 @@ Patient.map((value,i)=>{
 
 <Card  key={i} Style={styles.cardModel}>
 <TouchableOpacity onPress={()=>{deleteHandler(value.id)}}>
-<Image style={{marginLeft:'90%'}} source={Delete}/>
+
 </TouchableOpacity>
 <View style={{margin:20,width:'100%',flexDirection:'row'}}>
   <Text >Name:{value.name}</Text>
